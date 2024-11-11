@@ -2,7 +2,6 @@ import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 
 const ProductCard = (props) => {
-	console.log(props);
 	const item = props.item;
 	const audioRef = useRef(null); // Reference to the audio element
 	const [isPlaying, setIsPlaying] = useState(false); // Track the play/pause state

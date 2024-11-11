@@ -6,9 +6,7 @@ import { demoStyles } from "./demoStyles";
 const ProductFeatureList = () => {
 	const products = getProducts();
 
-	useEffect(() => {
-		console.log(products);
-	}, [products]);
+	useEffect(() => {}, [products]);
 
 	const filterFeatureProducts = products.map((item) => (item.feature ? <ProductCard key={item.id} item={item} /> : null));
 

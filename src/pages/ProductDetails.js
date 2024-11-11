@@ -12,9 +12,7 @@ const ProductDetails = () => {
 	const products = getProducts();
 
 	const pathname = location.pathname;
-	const returnToHome = () => {
-		console.log("test");
-	};
+	const returnToHome = () => {};
 
 	return (
 		<>

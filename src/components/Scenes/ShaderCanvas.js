@@ -15,7 +15,6 @@ const ShaderCanvas = ({ imageUrl }) => {
 		// Load the image as texture
 		const textureLoader = new THREE.TextureLoader();
 		const texture = textureLoader.load(imageUrl);
-		console.log(texture);
 
 		// Create a plane geometry and apply the texture
 		const geometry = new THREE.PlaneGeometry(10, 10);
