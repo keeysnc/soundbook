@@ -36,13 +36,6 @@ const ProductDetails = () => {
 										</Link>
 										<h4 className="text-h4">{item.product_name}</h4>
 										<p>{item.price}</p>
-										<p className="pt-4">
-											Crafted for performance and style, our fitness apparel blends comfort, durability, and flexibility to meet the demands of your
-											active lifestyle. Designed with high-quality, breathable fabrics, each piece provides the perfect fit to keep you moving freely,
-											whether you're at the gym, outdoors, or on the go. With modern designs and thoughtful details, our gear supports you through
-											every workout, helping you look and feel your best.
-										</p>
-										<br />
 									</div>
 								</HalfLayout>
 							</div>
