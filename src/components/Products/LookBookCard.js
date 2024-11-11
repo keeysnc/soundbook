@@ -74,7 +74,7 @@ const ProductCard = (props) => {
 				</div>
 
 				{/* Audio Element */}
-				<audio ref={audioRef} src={props.audio ? props.audio : null} />
+				<audio loop ref={audioRef} src={props.audio ? props.audio : null} />
 			</div>
 		</Link>
 	);
