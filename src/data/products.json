@@ -1,0 +1,74 @@
+[
+	{
+		"id": 1,
+		"product_name": "White Noise",
+		"price": "White noise is a consistent, uniform sound that contains all frequencies within the range of human hearing, typically producing a shhh or static-like sound. This sound has been shown to provide a variety of benefits, particularly in improving focus, relaxation, and sleep quality. By masking background distractions, white noise helps create a consistent auditory environment, which can be especially beneficial in noisy settings. For those with sleep disturbances, it can promote a deeper, more restful sleep by preventing sudden noises from interrupting the sleep cycle. Additionally, white noise can help enhance concentration and productivity by reducing cognitive distractions and providing a soothing backdrop for work or study. Whether it's used for relaxation, enhancing focus, or promoting better sleep, white noise is a versatile tool for improving mental well-being.",
+		"category": "Frequencies",
+		"colors": ["Blue"],
+		"sizes": ["sm", "md", "lg", "xl"],
+		"featureImg": "",
+		"collections": ["nike", "adidas"],
+		"url": "https://images.unsplash.com/photo-1600172454284-934feca24ccd?q=80&w=2835&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		"audio": "./white_noise.mp3"
+	},
+	{
+		"id": 2,
+		"product_name": "Brown Noise",
+		"price": "Brown noise, also known as Brownian noise, is a type of sound signal that has a deeper, more bass-heavy tone compared to white noise. It is created by emphasizing lower frequencies, resulting in a richer, smoother sound that resembles the rumbling of distant thunder or the sound of a waterfall. Brown noise has several benefits, particularly for relaxation and sleep. Its low-frequency tones have been shown to promote relaxation by creating a soothing and calming atmosphere, making it ideal for those who struggle with anxiety or stress. Additionally, brown noise is effective in masking disruptive background sounds, which can help individuals concentrate or fall asleep more easily. For those who find white noise too sharp or high-pitched, brown noise offers a more pleasant alternative, promoting restful sleep, reducing stress, and improving focus.",
+		"category": "Frequencies",
+		"colors": ["Blue", "Black", "White"],
+		"sizes": ["lg"],
+		"featureImg": "",
+		"collections": ["nike", "adidas"],
+		"audio": "./brown_noise.mp3",
+		"url": "https://images.unsplash.com/photo-1723561301184-74fd87a433ab?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+	},
+	{
+		"id": 3,
+		"product_name": "Pink Noise",
+		"price": "Pink noise is a type of sound that contains equal energy per octave, meaning it emphasizes lower frequencies more than higher ones, creating a balanced, calming sound. Often described as a softer version of white noise, pink noise has a natural, soothing quality that is not as harsh, making it ideal for relaxation and sleep. The deeper, richer tones of pink noise can help mask disruptive background sounds like traffic, conversations, or household noise, creating a more peaceful environment. It is frequently used to improve sleep quality, enhance focus during study or work, and reduce anxiety. Additionally, pink noise has been found to help promote healthy brain function, including supporting cognitive performance and relaxation during meditation. Its comforting and steady sound makes it a popular choice for those seeking better sleep and overall well-being.",
+		"category": "Frequencies",
+		"colors": ["Blue", "Black", "White"],
+		"sizes": ["sm", "md", "lg", "xl"],
+		"featureImg": "",
+		"collections": ["nike", "adidas"],
+		"audio": "./pink_noise.mp3",
+		"url": "https://images.unsplash.com/photo-1554755229-ca4470e07232?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+	},
+	{
+		"id": 4,
+		"product_name": "Nature Sounds",
+		"price": "Nature sounds, such as the gentle rustling of leaves, flowing water, bird songs, or the sound of ocean waves, have been shown to offer numerous mental and physical benefits. These natural auditory stimuli can help reduce stress, promote relaxation, and improve mood by evoking a sense of tranquility and connection to the environment. Studies have found that listening to nature sounds can lower cortisol levels, the hormone associated with stress, and reduce anxiety, making them an effective tool for mental well-being. Additionally, nature sounds are commonly used to improve focus and productivity, as they create a soothing background that helps people concentrate without the distractions of urban noise. Many people also use nature sounds to aid in sleep, as they create a calming atmosphere that can help ease the mind before rest. Whether for relaxation, enhancing cognitive performance, or simply bringing a piece of the natural world into daily life, nature sounds have a profound and therapeutic impact on overall health and wellness.",
+		"category": "Nature",
+		"colors": ["Blue", "Black", "White"],
+		"sizes": ["sm", "md", "lg", "xl"],
+		"featureImg": "",
+		"collections": ["nike", "adidas"],
+		"audio": "./nature_sounds.mp3",
+		"url": "https://images.unsplash.com/photo-1439853949127-fa647821eba0?q=80&w=2640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+	},
+	{
+		"id": 5,
+		"product_name": "Lofi Beats",
+		"price": "Lofi beats, a genre characterized by their calming, mellow rhythms and soft, ambient melodies, have gained popularity for their ability to create a peaceful atmosphere conducive to relaxation and focus. The repetitive nature of lofi music, often accompanied by subtle background noise like vinyl crackles or soft rain, can help to soothe the mind and create a sense of comfort. These beats are especially beneficial for studying, working, or meditating, as they provide a consistent auditory backdrop that promotes concentration without overwhelming the listener. By masking distractions, lofi beats help to reduce anxiety and mental clutter, allowing individuals to maintain a flow state and enhance productivity. Additionally, the laid-back tempo of lofi music can encourage relaxation, making it an effective tool for reducing stress and promoting mental clarity. Whether used for focus, relaxation, or simply to set a peaceful mood, lofi beats offer a simple yet powerful way to enhance mental well-being and foster creativity.",
+		"category": "Music",
+		"colors": ["Blue", "Black", "White"],
+		"sizes": ["sm", "md", "lg", "xl"],
+		"featureImg": "",
+		"collections": ["nike", "adidas"],
+		"audio": "./lofi_beats.mp3",
+		"url": "https://images.unsplash.com/photo-1582289126342-07c88e932c90?q=80&w=2835&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+	},
+	{
+		"id": 6,
+		"product_name": "Ambient Hum",
+		"price": "Coffee shop noise, often referred to as the ambient hum of a café, includes a mix of conversations, the clinking of cups, the hiss of espresso machines, and background music. For many people, this particular type of noise creates an ideal environment for focus and productivity. The moderate level of sound helps to mask other distractions while not being overly intrusive, making it easier to concentrate on tasks. Studies suggest that coffee shop noise, specifically in the range of 50-70 decibels, can enhance creativity and problem-solving abilities by providing just the right level of stimulation. This type of ambient noise offers a balance of calm and energy, preventing the mind from becoming too bored or too overwhelmed. It can also induce a feeling of social connectedness, making it easier to engage in work while feeling less isolated. Whether you're working on a project, brainstorming, or studying, the gentle buzz of a coffee shop can provide the perfect backdrop to boost both focus and creativity.",
+		"category": "Background Noise",
+		"colors": ["Blue", "Black", "White"],
+		"sizes": ["md", "lg", "xl"],
+		"feature": true,
+		"collections": ["nike", "adidas"],
+		"audio": "./ambient_hum.mp3",
+		"url": "https://images.unsplash.com/photo-1496344176366-885e6ac6c937?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+	}
+]

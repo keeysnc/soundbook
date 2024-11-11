@@ -1,0 +1,42 @@
+[
+	{
+		"id": "1",
+		"path": "the-power-of-white-noise",
+		"title": "The Power of White Noise: How It Can Boost Your Focus and Improve Sleep",
+		"author": "",
+		"category": "Frequencies",
+		"caption": "White noise, often described as a consistent sound across all audible frequencies, serves as a calming backdrop that can mask disruptive noises. It creates a steady, soothing soundscape that helps the mind focus, providing relief from distractions whether you're working, studying, or trying to fall asleep. By promoting relaxation and reducing stress, white noise can improve your overall well-being, enhancing productivity and aiding in restful sleep. It’s a simple yet effective tool to create a peaceful environment in the midst of the chaos of daily life.",
+		"imgUrl": "https://images.pexels.com/photos/4458554/pexels-photo-4458554.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+		"featureImage": true
+	},
+	{
+		"id": "2",
+		"path": "ambient-music-best-times",
+		"title": "Best Times to Listen to Ambient Music: A Guide to Enhancing Your Mood and Productivity",
+		"author": "",
+		"category": "Study Tips",
+		"caption": "Ambient music has the unique ability to transform any environment, creating a soothing atmosphere that can enhance relaxation, focus, and overall well-being. But when exactly is the best time to immerse yourself in the gentle, atmospheric sounds of ambient music? Here’s a guide to the optimal moments for tuning into ambient sounds and making the most of its calming effects.",
+		"imgUrl": "https://images.pexels.com/photos/7283630/pexels-photo-7283630.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+		"featureImage": true
+	},
+	{
+		"id": "3",
+		"path": "noise-difference-white-brown-pink",
+		"title": "The Difference Between White, Brown, and Pink Noise: Understanding the Sounds That Shape Our Environment",
+		"author": "",
+		"category": "Informational",
+		"caption": "Noise is a natural part of the world around us, and it can have a surprising impact on our mood, productivity, and overall well-being. While we often think of noise as simply sound that disrupts our peace, certain types of noise can have positive effects, particularly when it comes to relaxation, concentration, and sleep. White, brown, and pink noise are three popular types of sound frequencies that vary in their characteristics, and understanding the differences between them can help you choose the one that best suits your needs. Here’s an in-depth look at each type of noise and how it can influence your environment.",
+		"imgUrl": "https://images.pexels.com/photos/2249961/pexels-photo-2249961.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+		"featureImage": true
+	},
+	{
+		"id": "4",
+		"path": "how-white-noise-is-created",
+		"title": "How White Noise Is Created: The Science Behind the Sound",
+		"author": "",
+		"category": "Informational",
+		"caption": "White noise is a sound that many people use to mask background disturbances, promote better sleep, or improve concentration. But how is this mysterious shhh sound created? White noise, often described as the sound of static or the hiss of an untuned radio, is much more than just an unpleasant sound. It’s a scientifically structured type of noise that has wide applications in our daily lives. In this article, we'll explore the science behind white noise and how it is created.",
+		"imgUrl": "https://images.pexels.com/photos/7233356/pexels-photo-7233356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+		"featureImage": true
+	}
+]

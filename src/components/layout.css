@@ -1,0 +1,9 @@
+.gridLine1 {
+	width: 100px;
+	height: 100vh;
+	background: black;
+	position: absolute;
+	z-index: 100;
+	top: 0;
+	left: 0;
+}
