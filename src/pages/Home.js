@@ -7,6 +7,7 @@ import Cover from "../components/Cover/Cover";
 import Modal from "src/components/Modal/Modal";
 import LookBookCard from "../components/Products/LookBookCard";
 import Video from "../components/Video/Video";
+import AudioPlayer from "src/components/AudioPlayer/AudioPlayer";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -134,37 +135,6 @@ const Home = () => {
           }
         `}</style>
 			</svg>
-
-			<div className="container pt-10 md:pt-20 px-4 mx-auto flex flex-col">
-				<ThreeForthLayout>
-					{/* <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-						<img src={productInfo?.product_url} alt={productInfo?.product_name} className="w-full h-full object-cover" />
-					</Modal> */}
-
-					<div className="grid gap-10 md:gap-20 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 pb-10 md:pb-20">{mapProductsCards}</div>
-				</ThreeForthLayout>
-			</div>
-
-			<Video ref={videoRef} src="./lookbookVideo.mp4" className="w-full" />
-
-			<div className="mx-auto flex flex-col">
-				<ThreeForthLayout>
-					<div className="grid gap-6 md:gap-10 xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 mb-12 md:mb-24">
-						<div className="borderLines hidden md:block"></div>
-						<div className="col-span-2 px-4 md:px-20 text-center md:text-left">
-							<h1 className="text-xl md:text-3xl font-semibold">"Harmony for the Mind: Embracing Soothing Sounds for Enhanced Wellness"</h1>
-							<p className="pt-2 text-sm md:text-base">
-								An exploration of the profound connection between sound and mental well-being. Soothing sounds, such as gentle nature noises, calming
-								music, or ambient white noise, have the power to reduce stress, improve focus, and create a peaceful environment that nurtures both
-								mind and body. Integrating these sounds into your daily routine can help ease anxiety, enhance relaxation, and foster a deeper sense
-								of calm. Whether used for meditation, studying, or simply unwinding after a long day, soothing sounds serve as a simple yet effective
-								tool in enhancing overall wellness and promoting a balanced, centered lifestyle.
-							</p>
-						</div>
-						<div className="borderLines hidden md:block"></div>
-					</div>
-				</ThreeForthLayout>
-			</div>
 		</div>
 	);
 };

@@ -8,7 +8,6 @@ const Footer = () => {
 	return (
 		<>
 			<div>
-				<div>{createPromoBanner(promoText)}</div>
 				<div className={footerStyles.footer_bg}>
 					<div className={footerStyles.footer_container}>
 						<a href="/" className="pb-4">
