@@ -109,6 +109,7 @@ const ThreeScene = () => {
 			ref={mountRef}
 			style={{
 				height: "100%", // Make the parent container fill the parent height
+				overflow: "hidden",
 			}}
 		/>
 	);
