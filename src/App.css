@@ -224,3 +224,29 @@ input[type="range"]::-moz-range-thumb {
 input[type="range"]:focus::-webkit-slider-thumb {
 	box-shadow: 0 0 0 2px #00f; /* Add a focus effect if you want */
 }
+
+/* Hide all before and after styles on mobile */
+@media (max-width: 768px) {
+	.gridLines::before,
+	.gridLines::after,
+	.gridCircle::after,
+	.smallGridLines:first-child::after,
+	.smallGridLines:last-child::before,
+	.borderLines::after,
+	.textUnderline::after {
+		content: none !important;
+	}
+}
+
+.gridContainer {
+	width: 100%;
+	max-width: 100%; /* Ensures grid doesn't exceed the width of the container */
+	overflow: hidden; /* Prevents horizontal scrolling */
+}
+
+.gridCircle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden; /* Prevent horizontal overflow */
+}
