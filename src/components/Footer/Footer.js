@@ -14,7 +14,7 @@ const Footer = () => {
 							<a href="/" className="pb-4">
 								<svg width="75" height="75" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
 									{/* Inner Circle */}
-									<circle cx="100" cy="100" r="70" stroke="white" strokeWidth="6" fill="none" />
+									<circle cx="100" cy="100" r="70" stroke="#4b5563" strokeWidth="6" fill="none" />
 
 									{/* Text Path Definition */}
 									<defs>
@@ -22,7 +22,7 @@ const Footer = () => {
 									</defs>
 
 									{/* Rotating Text */}
-									<text fontSize="30" fontFamily="Bebas" fill="white">
+									<text fontSize="30" fontFamily="Bebas" fill="#4b5563">
 										<textPath
 											href="#textPath"
 											startOffset="0%"

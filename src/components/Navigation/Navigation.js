@@ -26,13 +26,13 @@ const Navigation = () => {
 	}, []);
 
 	return (
-		<nav className="w-full bg-black text-white">
+		<nav className="w-full bg-white text-[#4b5563]">
 			<div className="container flex flex-row items-center align-center justify-between pt-2 pb-2 px-4 mx-auto text-base">
 				<div className="flex flex-row" ref={logoRef}>
 					<a href="/">
 						<svg width="75" height="75" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
 							{/* Inner Circle */}
-							<circle cx="100" cy="100" r="70" stroke="white" strokeWidth="6" fill="none" />
+							<circle cx="100" cy="100" r="70" stroke="#4b5563" strokeWidth="6" fill="none" />
 
 							{/* Text Path Definition */}
 							<defs>
@@ -40,7 +40,7 @@ const Navigation = () => {
 							</defs>
 
 							{/* Rotating Text */}
-							<text fontSize="30" fontFamily="Bebas" fill="white">
+							<text fontSize="30" fontFamily="Bebas" fill="#4b5563">
 								<textPath
 									href="#textPath"
 									startOffset="0%"

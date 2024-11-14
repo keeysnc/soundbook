@@ -119,7 +119,7 @@ const Home = () => {
 				<defs>
 					<path id="textPath" d="M 100, 100 m -80, 0 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0" />
 				</defs>
-				<text fontSize="8" fontFamily="Bebas" fill="#a6a6a6">
+				<text fontSize="8" fontFamily="Bebas" fill="#4b5563">
 					<textPath href="#textPath" startOffset="0%" style={{ animation: "rotateText 8s linear infinite" }}>
 						LET THE RIGHT SOUNDS FUEL YOUR FOCUS, PRODUCTIVITY AND CREATIVITY.
 					</textPath>

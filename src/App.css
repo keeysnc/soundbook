@@ -255,7 +255,7 @@ input[type="range"]:focus::-webkit-slider-thumb {
 	position: fixed;
 	width: 80px; /* Adjust size */
 	height: 80px; /* Adjust size */
-	border: 2px solid rgb(0, 0, 0); /* White semi-transparent border */
+	border: 2px solid #4b5563; /* White semi-transparent border */
 	border-radius: 50%; /* Make it circular */
 	pointer-events: none; /* Ignore clicks on the ring */
 	transform: translate(-50%, -50%); /* Center the ring on the cursor */
