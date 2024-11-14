@@ -34,29 +34,35 @@ const ThreeScene = () => {
 	`;
 
 	useEffect(() => {
-		// Basic setup
 		const scene = new THREE.Scene();
 		const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 		const renderer = new THREE.WebGLRenderer({ antialias: true });
 
-		renderer.setSize(window.innerWidth, window.innerHeight);
-		mountRef.current.appendChild(renderer.domElement); // Append the renderer to the DOM
+		// Resize function to make canvas full width on mobile
+		const setRendererSize = () => {
+			const width = window.innerWidth;
+			const height = window.innerWidth < 768 ? window.innerWidth * 0.75 : window.innerHeight; // Adjust height on mobile
 
-		// Load the video
+			renderer.setSize(width, height);
+			camera.aspect = width / height;
+			camera.updateProjectionMatrix();
+		};
+
+		setRendererSize(); // Set initial size
+		mountRef.current.appendChild(renderer.domElement); // Append renderer to the DOM
+
 		const video = document.createElement("video");
-		video.src = "./lookbookCover.mp4"; // Replace with your video path
+		video.src = "./lookbookCover.mp4";
 		video.loop = true;
 		video.muted = true;
 		video.autoplay = true;
-		video.play(); // Ensure it starts playing automatically
+		video.play();
 
-		// Create a video texture
 		const texture = new THREE.VideoTexture(video);
 		texture.minFilter = THREE.LinearFilter;
 		texture.magFilter = THREE.LinearFilter;
 		texture.format = THREE.RGBAFormat;
 
-		// Create a plane geometry and apply the video texture with shaders
 		const geometry = new THREE.PlaneGeometry(20, 15);
 		const material = new THREE.ShaderMaterial({
 			uniforms: {
@@ -69,39 +75,34 @@ const ThreeScene = () => {
 
 		const plane = new THREE.Mesh(geometry, material);
 		scene.add(plane);
-
-		// Set camera position
 		camera.position.z = 5;
 
-		// Mouse movement handler
 		const onMouseMove = (event) => {
-			// Normalize mouse position to a range between 0 and 1
 			const mouseX = event.clientX / window.innerWidth;
-			const mouseY = 1 - event.clientY / window.innerHeight; // Y coordinate is inverted in WebGL
-
-			// Update mouse position uniform
+			const mouseY = 1 - event.clientY / window.innerHeight;
 			mouseRef.current.set(mouseX, mouseY);
 		};
 
-		// Add mouse move listener
-		window.addEventListener("mousemove", onMouseMove);
+		const handleResize = () => setRendererSize();
 
-		// Animation loop
+		window.addEventListener("mousemove", onMouseMove);
+		window.addEventListener("resize", handleResize);
+
 		const animate = () => {
 			requestAnimationFrame(animate);
-			material.uniforms.mouse.value.copy(mouseRef.current); // Update mouse uniform
+			material.uniforms.mouse.value.copy(mouseRef.current);
 			renderer.render(scene, camera);
 		};
 		animate();
 
-		// Clean up on component unmount
 		return () => {
 			window.removeEventListener("mousemove", onMouseMove);
-			mountRef.current.removeChild(renderer.domElement); // Clean up renderer
+			window.removeEventListener("resize", handleResize);
+			mountRef.current.removeChild(renderer.domElement);
 		};
 	}, []);
 
-	return <div className="canvas-container absolute -z-10 top-0" ref={mountRef} />; // Render the ref container for the Three.js scene
+	return <div className="canvas-container absolute -z-10 top-0 w-full max-w-full" ref={mountRef} style={{ height: "auto", overflow: "hidden" }} />;
 };
 
 export default ThreeScene;
