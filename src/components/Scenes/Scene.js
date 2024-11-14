@@ -6,46 +6,47 @@ const ThreeScene = () => {
 	const mouseRef = useRef(new THREE.Vector2(0, 0)); // Mouse position
 
 	const vertexShader = `
-		varying vec2 vUv;
-		void main() {
-			vUv = uv; // Pass UV coordinates to the fragment shader
-			gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
-		}
-	`;
+    varying vec2 vUv;
+    void main() {
+      vUv = uv; // Pass UV coordinates to the fragment shader
+      gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+    }
+  `;
 
 	const fragmentShader = `
-		uniform sampler2D texture1;
-		uniform vec2 mouse;
-		varying vec2 vUv;
+    uniform sampler2D texture1;
+    uniform vec2 mouse;
+    varying vec2 vUv;
 
-		void main() {
-			vec2 uv = vUv;
+    void main() {
+      vec2 uv = vUv;
 
-			// Calculate distance from the mouse position to the current fragment
-			float dist = distance(uv, mouse);
+      // Calculate distance from the mouse position to the current fragment
+      float dist = distance(uv, mouse);
 
-			// Change perspective effect based on distance
-			uv += normalize(uv - mouse) * (0.01 / dist); // Adjust the intensity as needed
+      // Change perspective effect based on distance
+      uv += normalize(uv - mouse) * (0.01 / dist); // Adjust the intensity as needed
 
-			// Apply the texture with a perspective effect based on mouse position
-			vec4 color = texture2D(texture1, uv);
-			gl_FragColor = color;
-		}
-	`;
+      // Apply the texture with a perspective effect based on mouse position
+      vec4 color = texture2D(texture1, uv);
+      gl_FragColor = color;
+    }
+  `;
 
 	useEffect(() => {
 		const scene = new THREE.Scene();
 		const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 		const renderer = new THREE.WebGLRenderer({ antialias: true });
 
-		// Resize function to make canvas full width on mobile
+		// Resize function to make canvas full width and height
 		const setRendererSize = () => {
-			const width = window.innerWidth;
-			const height = window.innerWidth < 768 ? window.innerWidth * 0.75 : window.innerHeight; // Adjust height on mobile
+			const parent = mountRef.current;
+			const width = parent.offsetWidth;
+			const height = parent.offsetHeight;
 
-			renderer.setSize(width, height);
-			camera.aspect = width / height;
-			camera.updateProjectionMatrix();
+			renderer.setSize(width, height); // Set the size of the renderer to fill the parent container
+			camera.aspect = width / height; // Adjust camera aspect ratio
+			camera.updateProjectionMatrix(); // Update the projection matrix to reflect the new aspect ratio
 		};
 
 		setRendererSize(); // Set initial size
@@ -102,7 +103,15 @@ const ThreeScene = () => {
 		};
 	}, []);
 
-	return <div className="canvas-container absolute -z-10 top-0 w-full max-w-full" ref={mountRef} style={{ height: "auto", overflow: "hidden" }} />;
+	return (
+		<div
+			className="canvas-container absolute -z-10 top-0 left-0 w-full"
+			ref={mountRef}
+			style={{
+				height: "100%", // Make the parent container fill the parent height
+			}}
+		/>
+	);
 };
 
 export default ThreeScene;

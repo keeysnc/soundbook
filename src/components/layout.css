@@ -1,6 +1,6 @@
 .gridLine1 {
 	width: 100px;
-	height: 100vh;
+	height: 100%;
 	background: black;
 	position: absolute;
 	z-index: 100;
