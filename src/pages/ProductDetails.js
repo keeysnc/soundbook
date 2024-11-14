@@ -21,12 +21,11 @@ const ProductDetails = () => {
 					return (
 						<>
 							<Pagination category={item.category} name={item.product_name} />
-							<div className="container gap-10 sm:h-full md:h-screen lg:h-screen gridLines px-4 pt-12 mx-auto left-sidebar-layout flex flex-col md:flex-row">
-								<HalfLayout>
-									<div className="product-details-img">
-										<img className="object-cover object-center w-full h-full" alt="detail-img" src={item.url} />
-									</div>
-								</HalfLayout>
+							<div className="container gap-10 sm:h-full md:h-screen lg:h-screen  pt-12 mx-auto left-sidebar-layout flex flex-col md:flex-row">
+								<div className="product-details-img w-[50%] h-[500px]">
+									<img className="object-cover object-center w-full h-full" alt="detail-img" src={item.url} />
+								</div>
+
 								<HalfLayout>
 									<div className="product-details">
 										<Link to="/sounds" onClick={returnToHome} className="cursor-pointer">

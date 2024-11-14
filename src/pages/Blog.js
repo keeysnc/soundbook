@@ -42,7 +42,7 @@ const Blog = () => {
 
 	return (
 		<>
-			<div className="gridLines grid pb-15 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 " ref={blogContentRef}>
+			<div className="grid pb-15 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 " ref={blogContentRef}>
 				<div className="col-span-1"></div>
 				<div ref={(el) => videoRefs.current.push(el)}>
 					<Video2 src="./lookbookVideo2.mp4" />
