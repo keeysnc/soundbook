@@ -1,36 +1,33 @@
 import React, { useEffect, useState } from "react";
+import gsap from "gsap";
 
-const CustomCursor = () => {
-	const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
+const CursorRing = () => {
+	const [position, setPosition] = useState({ x: 0, y: 0 });
 
+	// In the useEffect hook:
 	useEffect(() => {
 		const handleMouseMove = (e) => {
-			setCursorPos({
-				x: e.clientX,
-				y: e.clientY,
-			});
+			gsap.to(".ring-cursor", { x: e.clientX, y: e.clientY, duration: 0.15, ease: "power3.out" });
 		};
-
-		// Add event listener for mouse movement
 		window.addEventListener("mousemove", handleMouseMove);
 
-		// Cleanup on component unmount
 		return () => {
 			window.removeEventListener("mousemove", handleMouseMove);
 		};
 	}, []);
 
 	return (
-		<div>
+		<>
 			<div
-				className="cursor-ring"
+				className="ring-cursor"
 				style={{
-					left: `${cursorPos.x}px`,
-					top: `${cursorPos.y}px`,
+					left: `${position.x}px`,
+					top: `${position.y}px`,
 				}}
 			></div>
-		</div>
+			{/* Other content */}
+		</>
 	);
 };
 
-export default CustomCursor;
+export default CursorRing;

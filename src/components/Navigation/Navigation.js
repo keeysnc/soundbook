@@ -48,7 +48,7 @@ const Navigation = () => {
 										animation: "rotateText 8s linear infinite",
 									}}
 								>
-									SOUNDBOOK
+									THESOUNDBOOK
 								</textPath>
 							</text>
 

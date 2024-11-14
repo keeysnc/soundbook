@@ -3,7 +3,7 @@ import { createPromoBanner } from "../../utils/utils";
 import { footerStyles } from "./footerStyles";
 
 const Footer = () => {
-	const promoText = "SOUNDBOOK - A Digital Sensory Curation";
+	const promoText = "THESOUNDBOOK - A Digital Sensory Curation";
 
 	return (
 		<>
@@ -30,7 +30,7 @@ const Footer = () => {
 												animation: "rotateText 8s linear infinite",
 											}}
 										>
-											SOUNDBOOK
+											THESOUNDBOOK
 										</textPath>
 									</text>
 
@@ -54,7 +54,7 @@ const Footer = () => {
 							<li className="pb-2">Shipping and Delivery</li>
 							<li className="pb-2">Return & Refund</li>
 						</ul> */}
-							<p className="text-[16px]">Digital Soundbook Curation [2024]</p>
+							<p className="pt-4 text-[16px]">Digital Soundbook Curation [2024]</p>
 							<b>
 								<p className="italic text-[16px]">
 									Curated with lofi beat produced by{" "}

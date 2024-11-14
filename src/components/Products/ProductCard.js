@@ -56,7 +56,7 @@ const ProductCard = (props) => {
 			<Link to={`/product/${item.id}`} relative="path">
 				<div>
 					<div className="ripple-effect">
-						<img ref={imageRef} className="grayscale h-96 w-full object-cover object-top" alt={item.product_name} src={item.url} />
+						<img ref={imageRef} className="h-96 w-full object-cover object-top" alt={item.product_name} src={item.url} />
 					</div>
 					<div className="flex flex-col pt-2">
 						<p ref={nameRef} className="text-lg font-semibold">

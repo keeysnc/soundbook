@@ -11,11 +11,13 @@ import Shop from "./pages/Shop";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Demo from "./pages/Demo";
+import CursorRing from "./components/customCursor/CustomCursor";
 
 function App() {
 	return (
 		<>
 			<Layout>
+				<CursorRing />
 				<BrowserRouter>
 					<Routes>
 						<Route index element={<Home />} />

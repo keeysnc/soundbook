@@ -32,7 +32,7 @@ const ProductDetails = () => {
 										<Link to="/sounds" onClick={returnToHome} className="cursor-pointer">
 											{exitBtn()}
 										</Link>
-										<h4 className="text-h4">{item.product_name}</h4>
+										<h4 className="text-h4 pb-4">{item.product_name}</h4>
 										<p>{item.price}</p>
 									</div>
 								</HalfLayout>

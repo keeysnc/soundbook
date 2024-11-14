@@ -250,3 +250,15 @@ input[type="range"]:focus::-webkit-slider-thumb {
 	align-items: center;
 	overflow: hidden; /* Prevent horizontal overflow */
 }
+
+.ring-cursor {
+	position: fixed;
+	width: 80px; /* Adjust size */
+	height: 80px; /* Adjust size */
+	border: 2px solid rgb(0, 0, 0); /* White semi-transparent border */
+	border-radius: 50%; /* Make it circular */
+	pointer-events: none; /* Ignore clicks on the ring */
+	transform: translate(-50%, -50%); /* Center the ring on the cursor */
+	transition: transform 0.1s ease-out; /* Smooth transition */
+	z-index: 200;
+}
