@@ -7,7 +7,7 @@ export const videoStyles = {
 
 export const videoStyles2 = {
 	video_container: "col-span-2",
-	video: "w-full h-full object-cover filter grayscale",
+	video: "w-full h-full object-cover",
 	controls: "bg-white absolute bottom-[20px] left-[50%] translate-x-[50%] flex gap-[10px]",
 	button: "hover:bg-black hover:text-white p-10 text-[16px] cursor-pointer",
 };
