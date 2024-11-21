@@ -64,7 +64,7 @@ const ProductCard = (props) => {
 
 			{/* Product name */}
 			<div className="flex flex-col pt-2 text-center">
-				<p ref={nameRef} className="text-lg font-semibold">
+				<p ref={nameRef} className="text-lg">
 					{item.product_name}
 				</p>
 				{/* More Info link */}
