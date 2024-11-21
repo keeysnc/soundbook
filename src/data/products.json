@@ -8,7 +8,7 @@
 		"sizes": ["sm", "md", "lg", "xl"],
 		"featureImg": "",
 		"collections": ["nike", "adidas"],
-		"url": "https://images.unsplash.com/photo-1600172454284-934feca24ccd?q=80&w=2835&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		"url": "https://images.pexels.com/photos/5740932/pexels-photo-5740932.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
 		"audio": "./white_noise.mp3"
 	},
 	{
@@ -21,7 +21,7 @@
 		"featureImg": "",
 		"collections": ["nike", "adidas"],
 		"audio": "./brown_noise.mp3",
-		"url": "https://images.unsplash.com/photo-1723561301184-74fd87a433ab?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+		"url": "https://images.pexels.com/photos/3573841/pexels-photo-3573841.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
 	},
 	{
 		"id": 3,
@@ -33,7 +33,7 @@
 		"featureImg": "",
 		"collections": ["nike", "adidas"],
 		"audio": "./pink_noise.mp3",
-		"url": "https://images.unsplash.com/photo-1554755229-ca4470e07232?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+		"url": "https://images.pexels.com/photos/4394530/pexels-photo-4394530.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
 	},
 	{
 		"id": 4,
@@ -45,11 +45,11 @@
 		"featureImg": "",
 		"collections": ["nike", "adidas"],
 		"audio": "./nature_sounds.mp3",
-		"url": "https://images.unsplash.com/photo-1439853949127-fa647821eba0?q=80&w=2640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+		"url": "https://images.pexels.com/photos/1089451/pexels-photo-1089451.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
 	},
 	{
 		"id": 5,
-		"product_name": "Lofi Beats",
+		"product_name": "Lofi Beats (Produced by 80% Cacao)",
 		"price": "Lofi beats, a genre characterized by their calming, mellow rhythms and soft, ambient melodies, have gained popularity for their ability to create a peaceful atmosphere conducive to relaxation and focus. The repetitive nature of lofi music, often accompanied by subtle background noise like vinyl crackles or soft rain, can help to soothe the mind and create a sense of comfort. These beats are especially beneficial for studying, working, or meditating, as they provide a consistent auditory backdrop that promotes concentration without overwhelming the listener. By masking distractions, lofi beats help to reduce anxiety and mental clutter, allowing individuals to maintain a flow state and enhance productivity. Additionally, the laid-back tempo of lofi music can encourage relaxation, making it an effective tool for reducing stress and promoting mental clarity. Whether used for focus, relaxation, or simply to set a peaceful mood, lofi beats offer a simple yet powerful way to enhance mental well-being and foster creativity.",
 		"category": "Music",
 		"colors": ["Blue", "Black", "White"],
@@ -57,7 +57,7 @@
 		"featureImg": "",
 		"collections": ["nike", "adidas"],
 		"audio": "./lofi_beats.mp3",
-		"url": "https://images.unsplash.com/photo-1582289126342-07c88e932c90?q=80&w=2835&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+		"url": "https://images.pexels.com/photos/2635817/pexels-photo-2635817.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
 	},
 	{
 		"id": 6,
@@ -69,6 +69,6 @@
 		"feature": true,
 		"collections": ["nike", "adidas"],
 		"audio": "./ambient_hum.mp3",
-		"url": "https://images.unsplash.com/photo-1496344176366-885e6ac6c937?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+		"url": "https://images.pexels.com/photos/1242458/pexels-photo-1242458.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
 	}
 ]
