@@ -52,33 +52,33 @@ const ProductCard = (props) => {
 	};
 
 	return (
-		<div className="product-card">
-			<Link to={`/product/${item.id}`} relative="path">
-				<div>
-					<div className="ripple-effect">
-						<img ref={imageRef} className="h-96 w-full object-cover object-top" alt={item.product_name} src={item.url} />
-					</div>
-					<div className="flex flex-col pt-2">
-						<p ref={nameRef} className="text-lg font-semibold">
-							{item.product_name}
-						</p>
-					</div>
+		<div className="product-card flex flex-col items-center mb-20">
+			{/* Image with play button */}
+			<div className="relative w-64 h-64 rounded-full overflow-hidden cursor-pointer" onClick={handlePlayPause}>
+				<img ref={imageRef} className="w-full h-full object-cover" alt={item.product_name} src={item.url} />
+				{/* Play/Pause button overlay */}
+				<div className="absolute inset-0 flex justify-center items-center bg-black bg-opacity-40">
+					{isPlaying ? <FaPause className="text-white text-4xl" /> : <FaPlay className="text-white text-4xl" />}
 				</div>
-			</Link>
+			</div>
 
-			{/* Audio player controls */}
-			<div className="mt-2 flex items-center space-x-3">
-				<audio ref={audioRef} src={item.audio} onTimeUpdate={handleTimeUpdate} onEnded={handleAudioEnd} />
+			{/* Product name */}
+			<div className="flex flex-col pt-2 text-center">
+				<p ref={nameRef} className="text-lg font-semibold">
+					{item.product_name}
+				</p>
+				{/* More Info link */}
+				<Link to={`/product/${item.id}`} className="italic hover:underline mt-2">
+					More Info
+				</Link>
+			</div>
 
-				{/* Play/Pause Button */}
-				<button onClick={handlePlayPause} className="play-pause-btn bg-black text-white p-2 rounded-full shadow-md">
-					{isPlaying ? <FaPause /> : <FaPlay />}
-				</button>
+			{/* Audio player */}
+			<audio ref={audioRef} src={item.audio} onTimeUpdate={handleTimeUpdate} onEnded={handleAudioEnd} />
 
-				{/* Progress bar */}
-				<div className="w-full bg-gray-300 rounded-full h-1">
-					<div style={{ width: `${progress}%` }} className="h-1 bg-black rounded-full transition-all"></div>
-				</div>
+			{/* Progress bar */}
+			<div className="mt-4 w-full bg-gray-300 rounded-full h-1">
+				<div style={{ width: `${progress}%` }} className="h-1 bg-black rounded-full transition-all"></div>
 			</div>
 		</div>
 	);
