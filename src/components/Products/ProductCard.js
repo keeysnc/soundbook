@@ -52,7 +52,7 @@ const ProductCard = (props) => {
 	};
 
 	return (
-		<div className="product-card flex flex-col items-center mb-20">
+		<div className="product-card flex flex-col items-center mt-10 mb-20">
 			{/* Image with play button */}
 			<div ref={imageRef} className="relative w-64 h-64 rounded-full overflow-hidden cursor-pointer" onClick={handlePlayPause}>
 				<img className="w-full h-full object-cover" alt={item.product_name} src={item.url} />
