@@ -19,6 +19,11 @@ const Shop = () => {
 						instrumentation and percussion from his home studio.
 					</p>
 				</section>
+				<section style={{ paddingTop: "2rem", textDecoration: "underline" }}>
+					<p>
+						<a href="mailto:80percentcacao@gmail.com">For project or music license inquires contact here.</a>
+					</p>
+				</section>
 				<br />
 				<br />
 				<section className="album-list">
@@ -63,6 +68,7 @@ const Shop = () => {
 						<FontAwesomeIcon icon={faShoppingCart} className="text-white text-3xl hover:opacity-75 transition-opacity duration-200" />
 					</a>
 				</div>
+				<br />
 			</div>
 			<ThreeScene />
 		</div>
