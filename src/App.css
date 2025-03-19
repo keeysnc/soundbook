@@ -7,11 +7,10 @@ body {
 	font-optical-sizing: auto;
 	font-weight: 400;
 	font-style: normal;
-	color: #4b5563;
+	color: white;
 }
 
 h1 {
-	font-family: "bebas-neue", sans-serif;
 	font-weight: 400;
 	font-style: normal;
 	font-size: 3rem;
@@ -115,6 +114,27 @@ h4 {
 	height: 1px;
 	z-index: 13;
 	background: #a6a6a6;
+}
+
+.album-list {
+	display: flex;
+	flex-direction: column;
+}
+
+.album-list a {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.album-list a:hover {
+	font-weight: 700;
+}
+
+.album-list li {
+	padding-bottom: 1rem;
+	padding-top: 1rem;
+	border-bottom: 1px solid white;
 }
 
 .textUnderline {
@@ -225,17 +245,8 @@ input[type="range"]:focus::-webkit-slider-thumb {
 	box-shadow: 0 0 0 2px #00f; /* Add a focus effect if you want */
 }
 
-/* Hide all before and after styles on mobile */
-@media (max-width: 768px) {
-	.gridLines::before,
-	.gridLines::after,
-	.gridCircle::after,
-	.smallGridLines:first-child::after,
-	.smallGridLines:last-child::before,
-	.borderLines::after,
-	.textUnderline::after {
-		content: none !important;
-	}
+.container {
+	width: 50%;
 }
 
 .gridContainer {
@@ -255,10 +266,27 @@ input[type="range"]:focus::-webkit-slider-thumb {
 	position: fixed;
 	width: 80px; /* Adjust size */
 	height: 80px; /* Adjust size */
-	border: 2px solid #4b5563; /* White semi-transparent border */
+	border: 2px solid #ffffff; /* White semi-transparent border */
 	border-radius: 50%; /* Make it circular */
 	pointer-events: none; /* Ignore clicks on the ring */
 	transform: translate(-50%, -50%); /* Center the ring on the cursor */
 	transition: transform 0.1s ease-out; /* Smooth transition */
 	z-index: 200;
+}
+
+/* Hide all before and after styles on mobile */
+@media (max-width: 996px) {
+	.gridLines::before,
+	.gridLines::after,
+	.gridCircle::after,
+	.smallGridLines:first-child::after,
+	.smallGridLines:last-child::before,
+	.borderLines::after,
+	.textUnderline::after {
+		content: none !important;
+	}
+
+	.container {
+		width: 100%;
+	}
 }

@@ -93,7 +93,7 @@ const PageTransition = () => {
 			renderer.dispose();
 			scene.remove(plane);
 		};
-	}, []);
+	}, [fragmentShader, vertexShader]);
 
 	return <div ref={containerRef} style={{ position: "fixed", top: 0, left: 0, width: "100%", height: "100%", zIndex: 999 }} />;
 };

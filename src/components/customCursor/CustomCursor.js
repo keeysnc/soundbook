@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import gsap from "gsap";
 
 const CursorRing = () => {
-	const [position, setPosition] = useState({ x: 0, y: 0 });
+	const [position] = useState({ x: 0, y: 0 });
 
 	// In the useEffect hook:
 	useEffect(() => {
