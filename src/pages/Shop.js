@@ -69,6 +69,20 @@ const Shop = () => {
 					</a>
 				</div>
 				<br />
+				<div>
+					<a
+						href="https://soundbetter.com/profiles/601905-nate-keeys"
+						rel="noopener noreferrer"
+						target="_blank"
+						title="Nate Keeys profile on SoundBetter"
+					>
+						<img
+							alt="Nate Keeys, Producer on SoundBetter"
+							src="https://d2p6ecj15pyavq.cloudfront.net/assets/SoundBetterBadge-c84cb3e75c4267f5bee41f7f617a81d9.svg"
+							style={{ maxWidth: "130px" }}
+						/>
+					</a>
+				</div>
 			</div>
 			<ThreeScene />
 		</div>
