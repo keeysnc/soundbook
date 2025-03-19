@@ -76,11 +76,13 @@ const Shop = () => {
 						target="_blank"
 						title="Nate Keeys profile on SoundBetter"
 					>
-						<img
-							alt="Nate Keeys, Producer on SoundBetter"
-							src="https://d2p6ecj15pyavq.cloudfront.net/assets/SoundBetterBadge-c84cb3e75c4267f5bee41f7f617a81d9.svg"
-							style={{ maxWidth: "130px" }}
-						/>
+						<div style={{ margin: "auto", display: "flex", justifyContent: "center" }}>
+							<img
+								alt="Nate Keeys, Producer on SoundBetter"
+								src="https://d2p6ecj15pyavq.cloudfront.net/assets/SoundBetterBadge-c84cb3e75c4267f5bee41f7f617a81d9.svg"
+								style={{ maxWidth: "130px" }}
+							/>
+						</div>
 					</a>
 				</div>
 			</div>
