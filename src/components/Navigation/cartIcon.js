@@ -5,7 +5,7 @@ const CartIcon = () => {
 		<>
 			<div className="flex flex-row">
 				<span>Cart</span>
-				{/* <div className="counter bg-black text-white w-4 h-4 text-sm flex justify-center items-center">1</div> */}
+				{/* <div className="counter bg-black text-black w-4 h-4 text-sm flex justify-center items-center">1</div> */}
 			</div>
 		</>
 	);

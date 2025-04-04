@@ -1,28 +1,38 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
-@import url("https://use.typekit.net/jmp3nse.css");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 body {
-	font-family: "Playfair Display", serif;
+	font-family: "Noto Sans", sans-serif;
+	background: white;
 	font-optical-sizing: auto;
-	font-weight: 400;
+	font-weight: 300;
 	font-style: normal;
-	color: white;
+	color: rgb(60, 60, 60);
+}
+
+.logo {
+	color: rgb(60, 60, 60);
+}
+
+.logo img {
+	width: 200px;
 }
 
 h1 {
-	font-weight: 400;
+	font-weight: 300;
 	font-style: normal;
-	font-size: 3rem;
-	line-height: 3rem;
+	font-size: 1rem;
+	line-height: 1rem;
+	padding-bottom: 10px;
 }
 
 h4 {
-	font-family: "bebas-neue", sans-serif;
-	font-weight: 400;
 	font-style: normal;
 	font-size: 2rem;
 	line-height: 2rem;
+}
+
+.content-cta {
+	position: relative;
 }
 
 .gridLines,
@@ -108,9 +118,12 @@ h4 {
 	background: #a6a6a6;
 }
 
-.album-list {
+.album-list ul {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	gap: 1rem;
+	flex-wrap: wrap;
+	justify-content: start;
 }
 
 .album-list a {
@@ -126,7 +139,6 @@ h4 {
 .album-list li {
 	padding-bottom: 1rem;
 	padding-top: 1rem;
-	border-bottom: 1px solid white;
 }
 
 .textUnderline {
@@ -238,7 +250,16 @@ input[type="range"]:focus::-webkit-slider-thumb {
 }
 
 .container {
-	width: 50%;
+	width: 80%;
+}
+
+.hero-content {
+	width: 60%;
+}
+
+.content-bio {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
 }
 
 .gridContainer {
@@ -280,6 +301,15 @@ input[type="range"]:focus::-webkit-slider-thumb {
 
 	.container {
 		width: 100%;
+	}
+
+	.hero-content {
+		width: 100%;
+	}
+
+	iframe {
+		width: 360px !important;
+		height: 360px !important;
 	}
 }
 

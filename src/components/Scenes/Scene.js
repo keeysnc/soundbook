@@ -3,7 +3,7 @@ import * as THREE from "three";
 
 const ThreeScene = () => {
 	const mountRef = useRef(null);
-	const mouseRef = useRef(new THREE.Vector2(0, 0)); // Mouse position
+	// const mouseRef = useRef(new THREE.Vector2(0, 0)); // Mouse position
 
 	const vertexShader = `
     varying vec2 vUv;
@@ -68,7 +68,7 @@ const ThreeScene = () => {
 		const material = new THREE.ShaderMaterial({
 			uniforms: {
 				texture1: { value: texture },
-				mouse: { value: mouseRef.current },
+				// mouse: { value: mouseRef.current },
 			},
 			vertexShader,
 			fragmentShader,
@@ -78,30 +78,30 @@ const ThreeScene = () => {
 		scene.add(plane);
 		camera.position.z = 5;
 
-		const onMouseMove = (event) => {
-			const mouseX = event.clientX / window.innerWidth;
-			const mouseY = 1 - event.clientY / window.innerHeight;
-			mouseRef.current.set(mouseX, mouseY);
-		};
+		// const onMouseMove = (event) => {
+		// 	const mouseX = event.clientX / window.innerWidth;
+		// 	const mouseY = 1 - event.clientY / window.innerHeight;
+		// 	mouseRef.current.set(mouseX, mouseY);
+		// };
 
 		const handleResize = () => setRendererSize();
 
-		window.addEventListener("mousemove", onMouseMove);
+		// window.addEventListener("mousemove", onMouseMove);
 		window.addEventListener("resize", handleResize);
 
 		const animate = () => {
 			requestAnimationFrame(animate);
-			material.uniforms.mouse.value.copy(mouseRef.current);
+			// material.uniforms.mouse.value.copy(mouseRef.current);
 			renderer.render(scene, camera);
 		};
 		animate();
 
 		return () => {
-			window.removeEventListener("mousemove", onMouseMove);
+			// window.removeEventListener("mousemove", onMouseMove);
 			window.removeEventListener("resize", handleResize);
 			mountRef.current.removeChild(renderer.domElement);
 		};
-	}, []);
+	}, [fragmentShader, vertexShader]);
 
 	return (
 		<div

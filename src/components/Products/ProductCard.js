@@ -58,7 +58,7 @@ const ProductCard = (props) => {
 				<img className="w-full h-full object-cover" alt={item.product_name} src={item.url} />
 				{/* Play/Pause button overlay */}
 				<div className="absolute inset-0 flex justify-center items-center bg-black bg-opacity-40">
-					{isPlaying ? <FaPause className="text-white text-4xl" /> : <FaPlay className="text-white text-4xl" />}
+					{isPlaying ? <FaPause className="text-black text-4xl" /> : <FaPlay className="text-black text-4xl" />}
 				</div>
 			</div>
 
