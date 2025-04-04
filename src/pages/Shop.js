@@ -16,8 +16,8 @@ const Shop = () => {
 						instrumentation and percussion from his home studio.
 						<br />
 						<br />
-						80% Cacao has producing music since 2013, working with local artists from Richmond, VA, and the Washington DC area. His music has been
-						featured on several blogs including Earmilk, Stereofox, Hype Machine, theneptunes.org and more.
+						80% Cacao has producing music since 2013, working with local artists from Richmond, VA, San Diego, Brooklyn, NY and the Washington DC
+						area. His music has been featured on several blogs including Earmilk, Stereofox, Hype Machine, theneptunes.org and more.
 						<br />
 						<br />
 						Currently, 80% Cacao is focused on working with local artists and developing sounds and tools to create new compositions.

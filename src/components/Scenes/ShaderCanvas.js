@@ -66,7 +66,7 @@ const ShaderCanvas = ({ imageUrl }) => {
 			material.uniforms.uMouse.value.y = event.clientY;
 		};
 
-		// window.addEventListener("mousemove", handleMouseMove);
+		window.addEventListener("mousemove", handleMouseMove);
 
 		// Resize the canvas on window resize
 		const handleResize = () => {
