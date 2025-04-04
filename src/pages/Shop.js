@@ -14,9 +14,16 @@ const Shop = () => {
 						80% Cacao is a multi-instrumentalist, producer, and songwriter. His music is greatly influenced by ambient and airy sounds which he fuses
 						with soulful guitar and live percussion. 80% takes a creative approach to making music by recording and experimenting with live
 						instrumentation and percussion from his home studio.
+						<br />
+						<br />
+						80% Cacao has producing music since 2013, working with local artists from Richmond, VA, and the Washington DC area. His music has been
+						featured on several blogs including Earmilk, Stereofox, Hype Machine, theneptunes.org and more.
+						<br />
+						<br />
+						Currently, 80% Cacao is focused on working with local artists and developing sounds and tools to create new compositions.
 					</p>
 					<p className="content-cta">
-						[<a href="mailto:80percentcacao@gmail.com">For project or music license inquires contact here</a>]
+						<a href="mailto:80percentcacao@gmail.com">For project or music license inquires contact here</a>
 					</p>
 				</section>
 				<br />
