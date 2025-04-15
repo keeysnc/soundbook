@@ -3,12 +3,11 @@ import * as THREE from "three";
 
 const ThreeScene = () => {
 	const mountRef = useRef(null);
-	// const mouseRef = useRef(new THREE.Vector2(0, 0)); // Mouse position
 
 	const vertexShader = `
     varying vec2 vUv;
     void main() {
-      vUv = uv; // Pass UV coordinates to the fragment shader
+      vUv = uv;
       gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
     }
   `;
@@ -20,55 +19,50 @@ const ThreeScene = () => {
 
     void main() {
       vec2 uv = vUv;
-
-      // Calculate distance from the mouse position to the current fragment
       float dist = distance(uv, mouse);
-
-      // Change perspective effect based on distance
-      uv += normalize(uv - mouse) * (0.01 / dist); // Adjust the intensity as needed
-
-      // Apply the texture with a perspective effect based on mouse position
-      vec4 color = texture2D(texture1, uv);
-      gl_FragColor = color;
+      // Prevent divide-by-zero issues + clamp distortion effect
+      dist = max(dist, 0.001);
+      uv += normalize(uv - mouse) * (0.005 / dist); // Reduced distortion intensity
+      gl_FragColor = texture2D(texture1, uv);
     }
   `;
 
 	useEffect(() => {
 		const scene = new THREE.Scene();
 		const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-		const renderer = new THREE.WebGLRenderer({ antialias: true });
+		camera.position.z = 5;
 
-		// Resize function to make canvas full width and height
-		const setRendererSize = () => {
-			const parent = mountRef.current;
-			const width = parent.offsetWidth;
-			const height = parent.offsetHeight;
+		const renderer = new THREE.WebGLRenderer({ antialias: false }); // Disable antialiasing for faster render
+		renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)); // Cap pixel ratio for performance
+		renderer.setSize(window.innerWidth, window.innerHeight);
+		mountRef.current.appendChild(renderer.domElement);
 
-			renderer.setSize(width, height); // Set the size of the renderer to fill the parent container
-			camera.aspect = width / height; // Adjust camera aspect ratio
-			camera.updateProjectionMatrix(); // Update the projection matrix to reflect the new aspect ratio
-		};
-
-		setRendererSize(); // Set initial size
-		mountRef.current.appendChild(renderer.domElement); // Append renderer to the DOM
-
+		// Setup video
 		const video = document.createElement("video");
-		video.src = "./lookbookCover.mp4";
+		video.src = "/lookbookCover.mp4";
 		video.loop = true;
 		video.muted = true;
-		video.autoplay = true;
-		video.play();
+		video.playsInline = true;
 
+		video.addEventListener("canplaythrough", () => {
+			video.play();
+		});
+
+		// Texture setup
 		const texture = new THREE.VideoTexture(video);
 		texture.minFilter = THREE.LinearFilter;
 		texture.magFilter = THREE.LinearFilter;
 		texture.format = THREE.RGBAFormat;
+		texture.colorSpace = THREE.SRGBColorSpace;
+		texture.generateMipmaps = false;
 
+		// Geometry and shader
 		const geometry = new THREE.PlaneGeometry(20, 15);
+		const mouseUniform = new THREE.Vector2(0.5, 0.5);
 		const material = new THREE.ShaderMaterial({
 			uniforms: {
 				texture1: { value: texture },
-				// mouse: { value: mouseRef.current },
+				mouse: { value: mouseUniform },
 			},
 			vertexShader,
 			fragmentShader,
@@ -76,42 +70,58 @@ const ThreeScene = () => {
 
 		const plane = new THREE.Mesh(geometry, material);
 		scene.add(plane);
-		camera.position.z = 5;
 
-		// const onMouseMove = (event) => {
-		// 	const mouseX = event.clientX / window.innerWidth;
-		// 	const mouseY = 1 - event.clientY / window.innerHeight;
-		// 	mouseRef.current.set(mouseX, mouseY);
-		// };
+		// Resize handler (debounced for performance)
+		let resizeTimeout;
+		const handleResize = () => {
+			clearTimeout(resizeTimeout);
+			resizeTimeout = setTimeout(() => {
+				const width = window.innerWidth;
+				const height = window.innerHeight;
+				renderer.setSize(width, height);
+				camera.aspect = width / height;
+				camera.updateProjectionMatrix();
+			}, 100); // Delay to avoid rapid resize spam
+		};
 
-		const handleResize = () => setRendererSize();
+		// Mouse move (throttled using requestAnimationFrame)
+		let mouseMovePending = false;
+		const mouseMoveTarget = new THREE.Vector2();
+		const handleMouseMove = (e) => {
+			mouseMoveTarget.set(e.clientX / window.innerWidth, 1 - e.clientY / window.innerHeight);
+			if (!mouseMovePending) {
+				mouseMovePending = true;
+				requestAnimationFrame(() => {
+					mouseUniform.copy(mouseMoveTarget);
+					mouseMovePending = false;
+				});
+			}
+		};
 
-		// window.addEventListener("mousemove", onMouseMove);
 		window.addEventListener("resize", handleResize);
+		window.addEventListener("mousemove", handleMouseMove);
 
+		// Animation loop
 		const animate = () => {
 			requestAnimationFrame(animate);
-			// material.uniforms.mouse.value.copy(mouseRef.current);
+
+			if (video.readyState >= video.HAVE_CURRENT_DATA) {
+				texture.needsUpdate = true;
+			}
+
 			renderer.render(scene, camera);
 		};
 		animate();
 
+		// Cleanup
 		return () => {
-			// window.removeEventListener("mousemove", onMouseMove);
 			window.removeEventListener("resize", handleResize);
+			window.removeEventListener("mousemove", handleMouseMove);
 			mountRef.current.removeChild(renderer.domElement);
 		};
-	}, [fragmentShader, vertexShader]);
+	}, []);
 
-	return (
-		<div
-			className="canvas-container absolute -z-10 top-0 left-0 w-full"
-			ref={mountRef}
-			style={{
-				height: "100%", // Make the parent container fill the parent height
-			}}
-		/>
-	);
+	return <div ref={mountRef} className="absolute top-0 left-0 w-full h-screen -z-10" />;
 };
 
 export default ThreeScene;

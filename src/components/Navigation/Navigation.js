@@ -28,7 +28,7 @@ const Navigation = () => {
 		<nav className="w-full text-[white]">
 			<div className="container flex flex-row items-center align-center justify-between pt-2 pb-2 px-4 mx-auto text-base">
 				<div className="flex flex-row logo" ref={logoRef}>
-					<img src="./80-logo.svg" />
+					80% Cacao Music
 				</div>
 				<div ref={menuRef}>
 					<Menu />

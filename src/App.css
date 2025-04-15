@@ -6,11 +6,12 @@ body {
 	font-optical-sizing: auto;
 	font-weight: 300;
 	font-style: normal;
-	color: rgb(60, 60, 60);
+	color: white;
+	font-size: 2rem;
 }
 
 .logo {
-	color: rgb(60, 60, 60);
+	color: white;
 }
 
 .logo img {
@@ -18,10 +19,10 @@ body {
 }
 
 h1 {
-	font-weight: 500;
+	font-weight: 300;
 	font-style: normal;
-	font-size: 1rem;
-	line-height: 1rem;
+	font-size: 2.7rem;
+	line-height: 4rem;
 	padding-bottom: 10px;
 }
 
@@ -33,7 +34,7 @@ h4 {
 
 .content-cta {
 	position: relative;
-	border-bottom: 1px solid rgb(60, 60, 60);
+	border-bottom: 1px solid white;
 	display: inline-block;
 }
 
@@ -255,8 +256,12 @@ input[type="range"]:focus::-webkit-slider-thumb {
 	width: 80%;
 }
 
-.hero-content {
-	width: 60%;
+#canvas-container {
+	height: 100%;
+}
+
+canvas {
+	height: 200%;
 }
 
 .content-bio {
@@ -312,18 +317,5 @@ input[type="range"]:focus::-webkit-slider-thumb {
 	iframe {
 		width: 360px !important;
 		height: 360px !important;
-	}
-}
-
-@media (max-width: 996px) {
-	.canvas-container {
-		/* Apply 1250px height on mobile screens */
-		background: black !important;
-		width: 100%;
-		height: 1200px !important;
-	}
-
-	.canvas-container canvas {
-		display: none !important;
 	}
 }
