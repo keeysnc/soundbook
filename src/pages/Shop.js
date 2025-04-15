@@ -6,7 +6,7 @@ const Shop = () => {
 		<>
 			<div className="container px-4 pt-20 pb-20 mx-auto flex flex-col h-full justify-center">
 				<section className="hero-content">
-					<h1>80% Cacao | Music Artist + Producer + Technologist</h1>
+					<h1>Music Artist | Producer | Technologist</h1>
 					<p className="content-bio justify-center">
 						80% Cacao is a multi-instrumentalist, producer, and songwriter. His music is greatly influenced by ambient and airy sounds which he fuses
 						with soulful guitar and live percussion. 80% takes a creative approach to making music by recording and experimenting with live
